@@ -33,4 +33,11 @@ export const router = createBrowserRouter([
     path: "/qr/:token",
     Component: QRSignature,
   },
+  {
+  path: "/",
+  element: <Root />,
+  children: [
+    { path: "dashboard", element: <Dashboard /> },
+  ]
+}
 ]);

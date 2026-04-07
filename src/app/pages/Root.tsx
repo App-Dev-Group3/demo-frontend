@@ -1,6 +1,7 @@
 import { Outlet, Navigate } from 'react-router';
 import { useWorkflow } from '../context/WorkflowContext';
 import { Sidebar } from '../components/Sidebar';
+import AIAssistant from '../components/ui/AIAssistant';
 
 function ProtectedLayout() {
   const { isAuthenticated } = useWorkflow();
@@ -14,6 +15,7 @@ function ProtectedLayout() {
       <Sidebar />
       <main className="flex-1 overflow-auto">
         <Outlet />
+        <AIAssistant /> {}
       </main>
     </div>
   );
